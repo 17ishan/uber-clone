@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "UberMove";
+  src: url("./fonts/UberMove-Bold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UberMoveMedium";
+  src: url("./fonts/UberMove-Medium.woff2") format("woff2");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+body{
+    /* font-family: "UberMoveMedium"; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "UberMove"; */
+   
+}
