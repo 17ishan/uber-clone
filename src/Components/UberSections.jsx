@@ -17,7 +17,7 @@ export default function UberSections() {
               <br className="hidden sm:block" /> and more.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
-              <button className="bg-black text-white font-bold px-5 py-2 rounded-md">
+              <button className="bg-black text-white font-bold px-5 py-2 rounded-md hover:bg-gray-900">
                 Log in to your account
               </button>
               <button className="group px-5 py-2 border-gray-300">
@@ -58,7 +58,7 @@ export default function UberSections() {
                   className="border p-2 rounded-md flex-1 w-full sm:w-[173px] h-[44px]"
                 />
               </div>
-              <button className="bg-black text-white px-6 py-2 mt-4 rounded-md self-start lg:w-85 sm:w-[360px] h-[48px]">
+              <button className="bg-black text-white px-6 py-2 mt-4 rounded-md self-start hover:bg-gray-900 lg:w-85 sm:w-[360px] h-[48px]">
                 Next
               </button>
             </div>
@@ -106,7 +106,7 @@ export default function UberSections() {
               Make money on your schedule with deliveries or rides—or both.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
-              <button className="bg-black text-white px-5 py-2 rounded-md">Get started</button>
+              <button className="bg-black text-white px-5 py-2 rounded-md hover:bg-gray-900">Get started</button>
               <a href="#" className="text-sm text-gray-500 group">
                 Already have an account? Sign in
                 <div className="w-full h-[1.6px] bg-gray-300 translate-y transition duration-700"></div>
@@ -129,7 +129,7 @@ export default function UberSections() {
               local deliveries, for companies of any size.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-start">
-              <button className="bg-black text-white px-5 py-2 rounded-md">Get started</button>
+              <button className="bg-black text-white px-5 py-2 rounded-md hover:bg-gray-900">Get started</button>
               <button className="px-5 py-2 rounded-md group mt-2 sm:mt-0">
                 Check out our solutions
                 <div className="w-full h-[1.6px] bg-gray-300 translate-y transition duration-700"></div>
@@ -161,7 +161,7 @@ export default function UberSections() {
               Connect with thousands of drivers and earn more per week <br /> with Uber’s
               free fleet tools.
             </p>
-            <button className="bg-black text-white px-5 py-2 mt-6 rounded-md">Get started</button>
+            <button className="bg-black text-white px-5 py-2 mt-6 rounded-md hover:bg-gray-900">Get started</button>
           </div>
         </section>
       </div>
