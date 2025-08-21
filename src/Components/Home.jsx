@@ -1,9 +1,20 @@
 import React, { useState } from "react";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, Clock, MapPin, ChevronDown } from "lucide-react";
 
 export default function Home() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("Now");
+  const [open, setOpen] = useState(false);
+
+  const times = [
+    "Now",
+    "06:00 AM",
+    "09:00 AM",
+    "12:00 PM",
+    "03:00 PM",
+    "06:00 PM",
+    "09:00 PM",
+  ];
 
   return (
     <div className=" flex items-center  max-w-full   justify-center md:px-12 container">
@@ -89,23 +100,37 @@ export default function Home() {
                 />
               </label>
 
-              {/* Time Picker */}
-              <label className="flex items-center text-gray-500 space-x-2 bg-gray-100 p-3 rounded-md cursor-pointer">
-                <Clock className="w-6 h-4" />
-                <select
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                  className="bg-transparent outline-none cursor-pointer w-60"
+              {/* Time Picker (Custom Dropdown) */}
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setOpen(!open)}
+                  className="flex items-center justify-between w-[195px] focus:border   bg-gray-100 p-3 rounded-md text-gray-500"
                 >
-                  <option className="font-base ">Now</option>
-                  <option>06:00 AM</option>
-                  <option>09:00 AM</option>
-                  <option>12:00 PM</option>
-                  <option>03:00 PM</option>
-                  <option>06:00 PM</option>
-                  <option>09:00 PM</option>
-                </select>
-              </label>
+                  <div className="flex items-center space-x-2">
+                    <Clock className="w-4 h-4" />
+                    <span>{time}</span>
+                  </div>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+
+                {open && (
+                  <div className="absolute mt-1 w-[195px]  max-h-[142px] overflow-y-auto text-sm font-base rounded-md bg-white shadow-md z-10">
+                    {times.map((t) => (
+                      <div
+                        key={t}
+                        onClick={() => {
+                          setTime(t);
+                          setOpen(false);
+                        }}
+                        className="px-3 py-2 cursor-pointer hover:bg-gray-100"
+                      >
+                        {t}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
