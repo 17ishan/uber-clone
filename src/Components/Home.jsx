@@ -105,7 +105,7 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => setOpen(!open)}
-                  className="flex items-center justify-between w-[195px] focus:border   bg-gray-100 p-3 rounded-md text-gray-500"
+                  className="flex items-center justify-between w-[220px] focus:border   bg-gray-100 p-3 rounded-md text-gray-500"
                 >
                   <div className="flex items-center space-x-2">
                     <Clock className="w-4 h-4" />
