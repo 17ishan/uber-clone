@@ -8,10 +8,10 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black text-white fixed top-0 left-0 w-full z-50 text-[16px] shadow-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px- py-3">
         
         {/* Left Section */}
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-3 ">
           {/* Uber Logo */}
           <a href="/" className="text-2xl font-bold">
             <img src="./Logo.png" alt="Uber Logo" className="w-[70px] h-[40px]" />
@@ -19,15 +19,15 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-6 relative">
-            <a href="#" className="hover:underline">Ride</a>
-            <a href="#" className="hover:underline">Drive</a>
-            <a href="#" className="hover:underline">Business</a>
+            <a href="#" className="  rounded-4xl px-2 py-1  hover:bg-gray-900">Ride</a>
+            <a href="#" className=" rounded-4xl px-2 py-1  hover:bg-gray-900">Drive</a>
+            <a href="#" className=" rounded-4xl px-2 py-1  hover:bg-gray-900">Business</a>
 
             {/* Dropdown */}
-            <div className="relative">
+            <div className="relative ">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="hover:underline flex items-center"
+                className=" rounded-4xl px-2 py-1  focus:bg-gray-900 focus:border-4 flex items-center " 
               >
                 About
                 <FiChevronDown
@@ -38,7 +38,7 @@ const Navbar = () => {
               </button>
 
               {isOpen && (
-                <div className="absolute left-0 mt-2 w-52 text-black rounded shadow-lg bg-white">
+                <div className="absolute left-0 mt-4 w-52 text-gray-500 rounded shadow-xl bg-white">
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">About us</a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">Our offerings</a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">How Uber works</a>
@@ -57,15 +57,15 @@ const Navbar = () => {
 
         {/* Right Section (Desktop) */}
         <div className="hidden md:flex items-center space-x-6">
-          <button className="flex items-center space-x-1 hover:underline">
+          <button className="flex items-center space-x-1  rounded-4xl px-2 py-1  hover:bg-gray-900">
             <Globe className="w-4 h-4" />
             <span>EN</span>
           </button>
-          <a href="#" className="hover:underline">Help</a>
-          <a href="#" className="hover:underline">Log in</a>
+          <a href="#" className=" rounded-4xl px-2 py-1  hover:bg-gray-900">Help</a>
+          <a href="#" className=" rounded-4xl px-2 py-1  hover:bg-gray-900">Log in</a>
           <a
             href="#"
-            className="bg-white w-[73.6875px] h-[36px] text-sm text-black px-2 py-1 rounded-full font-medium hover:bg-gray-200 flex items-center justify-center"
+            className="bg-white w-[73.6875px] h-[36px] text-sm text-black px-2  py-1 rounded-full font-medium hover:bg-gray-200 flex items-center justify-center"
           >
             Sign up
           </a>

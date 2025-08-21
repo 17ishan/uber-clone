@@ -13,7 +13,7 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-black text-white ">
-      <div className="max-w-7xl mx-auto px-6 md:px-30 py-14">
+      <div className="max-w-7xl  mx-auto px-6 md:px-30 py-25 ">
 
         {/* Brand + Help */}
         <div className="mb-12">
@@ -26,6 +26,8 @@ export default function Footer() {
             Visit Help Center
           </a>
         </div>
+        <br />
+        <br />
 
         {/* Columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 mb-12">
@@ -76,6 +78,9 @@ export default function Footer() {
           </div>
         </div>
 
+        <br />
+        <br />
+        
         {/* Social icons */}
         <div className="flex items-center gap-25 text-white mb-10">
           <a href="#" aria-label="Facebook" className="hover:opacity-80"><FaSquareFacebook size={16} /></a>
@@ -84,6 +89,7 @@ export default function Footer() {
           <a href="#" aria-label="LinkedIn" className="hover:opacity-80"><FaLinkedinIn size={16} /></a>
           <a href="#" aria-label="Instagram" className="hover:opacity-80"><FaInstagram size={16} /></a>
         </div>
+
 
         {/* Store badges (left) + language/location (right) */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">

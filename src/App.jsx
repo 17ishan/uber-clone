@@ -10,6 +10,10 @@ import Footer from './Components/Footer'
 import QRSection from './Components/QRCardProps'
 import SeePrices from './Components/SeePrices'
 
+import "@fontsource/poppins"; 
+import "@fontsource/poppins/600.css"; 
+
+
 function App() {
   
 
