@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Section (Desktop) */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-3 ">
           <button className="flex items-center space-x-1  rounded-4xl px-2 py-1  hover:bg-gray-900">
             <Globe className="w-4 h-4" />
             <span>EN</span>
@@ -65,7 +65,7 @@ const Navbar = () => {
           <a href="#" className=" rounded-4xl px-2 py-1  hover:bg-gray-900">Log in</a>
           <a
             href="#"
-            className="bg-white w-[73.6875px] h-[36px] text-sm text-black px-2  py-1 rounded-full font-medium hover:bg-gray-200 flex items-center justify-center"
+            className="bg-white w-[73.6875px] h-[36px] text-sm text-black px-2  rounded-full font-medium hover:bg-gray-200 flex items-center justify-center"
           >
             Sign up
           </a>
@@ -122,8 +122,8 @@ const Navbar = () => {
           <a href="#" className="block hover:underline">Help</a>
           <a href="#" className="block hover:underline">Log in</a>
           <a
-            href="#"
-            className="bg-white w-full text-sm text-black px-2 py-2 rounded-full font-medium hover:bg-gray-200 flex items-center justify-center"
+            href="UberSections"
+            className="bg-white w-full text-sm text-black px-2 py rounded-full font-medium hover:bg-gray-200 flex items-center justify-center"
           >
             Sign up
           </a>
