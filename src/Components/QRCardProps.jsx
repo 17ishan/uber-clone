@@ -4,7 +4,7 @@ import { FiArrowRight } from "react-icons/fi"; // arrow icon
 function QRSection() {
   return (
     <div className="bg-gray-100 py-16 px-7 flex flex-col max-w-full items-center text-center md:text-left">
-      <div className="mx-auto flex-col w-full max-w-[1200px]">
+      <div className="mx-auto flex-col w-full lg:w-[1142px]">
         {/* Title */}
         <h2 className="text-2xl ml-2 sm:text-3xl md:text-4xl font-bold mb-10 text-left">
           It’s easier in the apps

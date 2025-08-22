@@ -60,9 +60,9 @@ export default function Home() {
 
   return (
     <div className=" flex items-center max-w-full justify-center md:px-12 container  ">
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-12  items-center pt-32 pb-10 ">
+      <div className=" mx-auto lg:w-[1142px] grid grid-cols-1 md:grid-cols-2 gap-12  items-center pt-32 pb-10 ">
         {/* Left Section */}
-        <div className="space-y-6 bg-red- ">
+        <div className="space-y-6  ">
           {/* Location */}
           <div className="flex items-center space-x-2 text-sm">
             <MapPin className="w-4 h-4" />
@@ -104,13 +104,13 @@ export default function Home() {
                 type="name"
                 name="user_name"
                 placeholder="Enter Name"
-                className="w-105 ml-7  p-3 rounded-md bg-gray-100 focus:outline-none"
+                className="w-[396px] ml-7  p-3 rounded-md bg-gray-100 focus:outline-none"
               />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 px-2">
+              <button className="absolute right-2 top-1/2 -translate-y-1/2 px-7">
                 <img src="./location-arrow.png" alt="" className="w-9 h-9" />
               </button>
             </div>
-            <div className="h-[44px] bg-black w-[1.5px] absolute top-[35px] left-[24.5px] z-10"></div>
+            <div className="h-[44px] bg-black w-[1.5px] absolute top-[35px] left-[24.5px] z-1"></div>
 
             {/* Dropoff */}
             <svg width="20" height="10"  className="ml-1   absolute  pl-3 w-8   h-[48px]  rounded-l-md bg-gray-100" viewBox="0 0 24 24" fill="none" data-baseweb="icon" >
@@ -126,13 +126,21 @@ export default function Home() {
               type="email"
               name="user_email"
               placeholder="Enter Email Id"
-              className="w-105 p-3 ml-7 rounded-md bg-gray-100 focus:outline-none "
+              className="w-[396px] p-3 ml-7 rounded-md bg-gray-100 focus:outline-none "
             />
 
+            <div className="flex gap-43 pb-3 absolute ml-2 z-25 text-gray-500">
+              <p>Date</p>
+              <p>Time</p>
+            </div>
+            <br />
+            <br />
+
+
             {/* Date & Time */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2 w-[420px]  ">
               {/* Calendar Picker */}
-              <div className="flex items-center space-x-2 text-gray-500 bg-gray-100 p-3 rounded-md">
+              <div className="flex items-center space-x-2 text-gray-500 bg-gray-100 p-3 rounded-md w-[210px] ">
                 <Calendar className="w-6 h-4" />
                 <DatePicker
                   selected={date}
@@ -144,13 +152,14 @@ export default function Home() {
                   
                 />
               </div>
-
+                
               {/* Time Picker */}
+              
               <div className="relative">
                 <button
                   type="button"
                   onClick={() => setOpen(!open)}
-                  className="flex items-center justify-between w-[220px] bg-gray-100 p-3 rounded-md text-gray-500"
+                  className="flex items-center justify-between  bg-gray-100 p-3 rounded-md text-gray-500 w-[210px] "
                 >
                   <div className="flex items-center space-x-2">
                     <Clock className="w-4 h-4" />

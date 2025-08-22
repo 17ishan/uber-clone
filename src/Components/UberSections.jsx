@@ -6,11 +6,11 @@ import { FaCalendarAlt, FaRegClock, FaEquals } from "react-icons/fa";
 export default function UberSections() {
   return (
     <div className="max-w-full">
-      <div className="w-full lg:w-[1220px] bg-white text-black mx-auto">
+      <div className=" lg:w-[1180px] bg-white text-black mx-auto  ">
         {/* Section 1 - Login */}
-        <section className="flex flex-col md:flex-row items-center justify-between mx-auto px-4 sm:px-6 lg:px-4 py-12 gap-5">
+        <section className="flex flex-col md:flex-row items-center justify-between mx-auto px-4 sm:px-6 lg:px-4 py-12 ">
           {/* Text */}
-          <div className="text-center md:text-left flex-1">
+          <div className="text-center md:text-left flex-1   ">
             <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
               Log in to see your account <br className="hidden sm:block" /> details
             </h2>
@@ -28,12 +28,12 @@ export default function UberSections() {
                 <div className="w-full h-[1.6px] bg-black scale-x-0 origin-left group-hover:scale-x-100 translate-y transition duration-700"></div>
               </button>
             </div>
-          </div>
+          </div>  
           {/* Image */}
           <img
             src="/Signup.svg"
             alt="Login illustration"
-            className="w-full  max-w-sm md:max-w-md lg:max-w-xl rounded-lg"
+            className="w-[553px] max-w-sm md:max-w-md lg:max-w-xl rounded-lg"
           />
         </section>
 
@@ -99,14 +99,17 @@ export default function UberSections() {
           <img
             src="/earner-illustra.webp"
             alt="Drive"
-            className="w-full max-w-sm md:max-w-md lg:max-w-xl rounded-lg"
+            className="w-full max-w-sm md:max-w-md lg:max-w-[553px] rounded-lg"
           />
-          <div className="text-center md:text-left flex-1 leading-8">
-            <h2 className="text-3xl sm:text-4xl font-bold">
+          <div className="text-center md:text-left flex-1  pl-1    ">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking- ">
               Drive when you want, make  what you need
             </h2>
-            <p className="text-gray-600 mt-2 text-sm sm:text-base">
-              Make money on your schedule with deliveries or <br /> rides—or both.
+            <br />
+            
+            <p className="text-gray-600 mt-2 text-sm sm:text-base leading-">
+              Make money on your schedule with deliveries or <br /> rides—or both.You 
+              can use your own car or choose a rental through Uber.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
               <button className="bg-black text-white px-5 py-2 rounded-md hover:bg-gray-900">Get started</button>
@@ -145,7 +148,7 @@ export default function UberSections() {
           <img
             src="/u4b-square.webp"
             alt="Business"
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl rounded-lg mt-8 md:mt-0"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[553px] rounded-lg mt-8 md:mt-0"
           />
         </section>
 
@@ -154,7 +157,7 @@ export default function UberSections() {
           <img
             src="/fleet.webp"
             alt="Rent"
-            className="w-full ml-0 max-w-sm md:max-w-md lg:max-w-xl rounded-lg"
+            className="w-full ml-0 max-w-sm md:max-w-md lg:max-w-[553px] rounded-lg "
           />
           <div className="text-center md:text-left sm:mr-6 flex-1  lg:ml-20">
             <h2 className="sm:text-md lg:text-4xl  sm:text-lg font-bold">
