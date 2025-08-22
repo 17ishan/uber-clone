@@ -18,7 +18,7 @@ function App() {
   
 
   return (
-    <div className='overflow-hidden font-poppins'>
+    <div className='overflow-hidden '>
       <Navbar/>
       <Home/>
       <Suggestions/>

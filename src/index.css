@@ -14,11 +14,15 @@
   font-style: normal;
 }
 
+body{
+  font-family: UberMoveMedium;
+}
 
 
 
 
-/* === Container: size + chrome (PC default) === */
+
+/*  Container: size + chrome (PC default)  */
 .custom-calendar.react-datepicker {
   width: 416px !important;
   height: 456px !important;
@@ -34,7 +38,7 @@
 /* Hide popper triangle */
 .custom-calendar .react-datepicker__triangle { display: none; }
 
-/* === Header === */
+/*  Header  */
 .custom-calendar .react-datepicker__header {
   background: #fff;
   border-bottom: 0;
@@ -47,7 +51,7 @@
 .custom-calendar .react-datepicker__navigation--previous { left: 12px; }
 .custom-calendar .react-datepicker__navigation--next { right: 12px; }
 
-/* === Weekdays === */
+/* Weekdays  */
 .custom-calendar .react-datepicker__day-names {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -62,7 +66,7 @@
   color: #6b7280; /* gray-500 */
 }
 
-/* === Weeks grid === */
+/*  Weeks grid  */
 .custom-calendar .react-datepicker__month {
   margin: 0 !important;
   padding: 0 16px 16px 16px;
@@ -72,7 +76,7 @@
   grid-template-columns: repeat(7, 1fr);
 }
 
-/* === Day cells === */
+/*  Day cells  */
 .custom-calendar .react-datepicker__day,
 .custom-calendar .react-datepicker__day--keyboard-selected,
 .custom-calendar .react-datepicker__day--weekend {
