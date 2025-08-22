@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt, FaRegClock, FaEquals } from "react-icons/fa";
 
 export default function UberSections() {
   return (
     <div className="max-w-full">
-      <div className="w-full lg:w-[1200px] bg-white text-black mx-auto">
+      <div className="w-full lg:w-[1220px] bg-white text-black mx-auto">
         {/* Section 1 - Login */}
         <section className="flex flex-col md:flex-row items-center justify-between mx-auto px-4 sm:px-6 lg:px-4 py-12 gap-5">
           {/* Text */}
@@ -31,7 +33,7 @@ export default function UberSections() {
           <img
             src="/Signup.svg"
             alt="Login illustration"
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg"
+            className="w-full  max-w-sm md:max-w-md lg:max-w-xl rounded-lg"
           />
         </section>
 
@@ -52,6 +54,7 @@ export default function UberSections() {
                 <input
                   type="date"
                   className="border p-2 rounded-md flex-1 sm:w-[173px] h-[44px]"
+                  
                 />
                 <input
                   type="time"
@@ -96,18 +99,18 @@ export default function UberSections() {
           <img
             src="/earner-illustra.webp"
             alt="Drive"
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg"
+            className="w-full max-w-sm md:max-w-md lg:max-w-xl rounded-lg"
           />
-          <div className="text-center md:text-left flex-1">
+          <div className="text-center md:text-left flex-1 leading-8">
             <h2 className="text-3xl sm:text-4xl font-bold">
-              Drive when you want, make <br /> what you need
+              Drive when you want, make  what you need
             </h2>
             <p className="text-gray-600 mt-2 text-sm sm:text-base">
-              Make money on your schedule with deliveries or rides—or both.
+              Make money on your schedule with deliveries or <br /> rides—or both.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
               <button className="bg-black text-white px-5 py-2 rounded-md hover:bg-gray-900">Get started</button>
-              <a href="#" className="text-sm text-gray-500 group">
+              <a href="#" className=" group mt-2">
                 Already have an account? Sign in
                 <div className="w-full h-[1.6px] bg-gray-300 translate-y transition duration-700"></div>
                 <div className="w-full h-[1.6px] bg-black scale-x-0 origin-left group-hover:scale-x-100 translate-y transition duration-700"></div>
@@ -142,7 +145,7 @@ export default function UberSections() {
           <img
             src="/u4b-square.webp"
             alt="Business"
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg mt-8 md:mt-0"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl rounded-lg mt-8 md:mt-0"
           />
         </section>
 
@@ -151,11 +154,11 @@ export default function UberSections() {
           <img
             src="/fleet.webp"
             alt="Rent"
-            className="w-full ml-0 max-w-sm md:max-w-md lg:max-w-lg rounded-lg"
+            className="w-full ml-0 max-w-sm md:max-w-md lg:max-w-xl rounded-lg"
           />
           <div className="text-center md:text-left sm:mr-6 flex-1  lg:ml-20">
             <h2 className="sm:text-md lg:text-4xl  sm:text-lg font-bold">
-              Make money by renting out <br /> your car
+              Make money by renting out your car
             </h2>
             <p className="text-gray-600 mt-2 text-sm sm:text-base leading-8 ">
               Connect with thousands of drivers and earn more per week <br /> with Uber’s

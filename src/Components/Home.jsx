@@ -1,10 +1,52 @@
-import React, { useState } from "react";
+import React, { useState , useRef } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { Calendar, Clock, MapPin, ChevronDown } from "lucide-react";
 
+
+import emailjs from "@emailjs/browser";
+
+
+
+
 export default function Home() {
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(null);
   const [time, setTime] = useState("Now");
   const [open, setOpen] = useState(false);
+
+
+
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_q946bvt",   // Service ID
+        "template_cioikqg",  // Template ID
+        form.current,
+        "_J6ai-tPQgoYvQ3Ui"  //  Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Message Sent:", result.text);
+          alert("Email sent successfully!");
+        },
+        (error) => {
+          console.log("Error:", error.text);
+          alert("Failed to send email.");
+        }
+      );
+    }
+
+
+
+
+  
+
 
   const times = [
     "Now",
@@ -17,10 +59,10 @@ export default function Home() {
   ];
 
   return (
-    <div className=" flex items-center  max-w-full   justify-center md:px-12 container">
-      <div className=" mx-auto  grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-32 pb-10">
+    <div className=" flex items-center max-w-full justify-center md:px-12 container  ">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-12  items-center pt-32 pb-10 ">
         {/* Left Section */}
-        <div className="space-y-6">
+        <div className="space-y-6 bg-red- ">
           {/* Location */}
           <div className="flex items-center space-x-2 text-sm">
             <MapPin className="w-4 h-4" />
@@ -31,48 +73,47 @@ export default function Home() {
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-bold leading-tight ">
             Go anywhere with <br /> Uber
           </h1>
 
-          {/* Form */}
-          <div className="space-y-4 w-full max-w-md relative">
+          <form ref={form} onSubmit={sendEmail} >
+
+           {/* Form */}
+          <div className="space-y-4 w-full max-w-md relative" >
+            {/* Hidden inputs for emailjs template variables */}
+            <input type="hidden" name="user_date" value={date ? date.toLocaleDateString() : ''} />
+            <input type="hidden" name="user_time" value={time} />
             {/* Pickup */}
             <div className="relative">
-              <svg
-                width="20"
-                height="20"
-                className="ml-2 mt-4 absolute"
-                viewBox="0 0 24 24"
-                fill="none"
-                data-baseweb="icon"
-              >
+
+
+              <div className="">
+                    <svg width="20" height="10" className="ml-1  absolute  pl-3 w-8 h-[48px]  rounded-l-md bg-gray-100" viewBox="0 0 24 24" fill="none" data-baseweb="icon" >
                 <title>search</title>
                 <path
                   d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"
                   fill="currentColor"
                 ></path>
               </svg>
+              
+              </div>
+
+
               <input
-                type="text"
-                placeholder="     Pickup location"
-                className="w-full p-3 rounded-md bg-gray-100 focus:outline-none"
+                type="name"
+                name="user_name"
+                placeholder="Enter Name"
+                className="w-105 ml-7  p-3 rounded-md bg-gray-100 focus:outline-none"
               />
               <button className="absolute right-2 top-1/2 -translate-y-1/2 px-2">
                 <img src="./location-arrow.png" alt="" className="w-9 h-9" />
               </button>
             </div>
-            <div className="h-[44px] bg-black w-[2px] absolute top-[36px] left-[16px]"></div>
+            <div className="h-[44px] bg-black w-[1.5px] absolute top-[35px] left-[24.5px] z-10"></div>
 
             {/* Dropoff */}
-            <svg
-              width="20"
-              height="20"
-              className="ml-2 mt-4 absolute"
-              viewBox="0 0 24 24"
-              fill="none"
-              data-baseweb="icon"
-            >
+            <svg width="20" height="10"  className="ml-1   absolute  pl-3 w-8   h-[48px]  rounded-l-md bg-gray-100" viewBox="0 0 24 24" fill="none" data-baseweb="icon" >
               <title>search</title>
               <path
                 fillRule="evenodd"
@@ -82,30 +123,34 @@ export default function Home() {
               ></path>
             </svg>
             <input
-              type="text"
-              placeholder="     Dropoff location"
-              className="w-full p-3 rounded-md bg-gray-100 focus:outline-none"
+              type="email"
+              name="user_email"
+              placeholder="Enter Email Id"
+              className="w-105 p-3 ml-7 rounded-md bg-gray-100 focus:outline-none "
             />
 
             {/* Date & Time */}
             <div className="grid grid-cols-2 gap-3">
               {/* Calendar Picker */}
-              <label className="flex items-center space-x-2 text-gray-500 bg-gray-100 p-3 rounded-md cursor-pointer">
-                <Calendar className="w-4 h-4" />
-                <input
-                  type="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  className="bg-transparent outline-none cursor-pointer"
+              <div className="flex items-center space-x-2 text-gray-500 bg-gray-100 p-3 rounded-md">
+                <Calendar className="w-6 h-4" />
+                <DatePicker
+                  selected={date}
+                  onChange={(d) => setDate(d)}
+                  placeholderText="Select date"
+                  className="bg-transparent outline-none cursor-pointer w-20  "
+                  calendarClassName="custom-calendar"
+                  dateFormat="dd/MM/yyyy"
+                  
                 />
-              </label>
+              </div>
 
-              {/* Time Picker (Custom Dropdown) */}
+              {/* Time Picker */}
               <div className="relative">
                 <button
                   type="button"
                   onClick={() => setOpen(!open)}
-                  className="flex items-center justify-between w-[220px] focus:border   bg-gray-100 p-3 rounded-md text-gray-500"
+                  className="flex items-center justify-between w-[220px] bg-gray-100 p-3 rounded-md text-gray-500"
                 >
                   <div className="flex items-center space-x-2">
                     <Clock className="w-4 h-4" />
@@ -115,7 +160,7 @@ export default function Home() {
                 </button>
 
                 {open && (
-                  <div className="absolute mt-1 w-[195px]  max-h-[142px] overflow-y-auto text-sm font-base rounded-md bg-white shadow-md z-10">
+                  <div className="absolute mt-1 w-[195px] max-h-[142px] overflow-y-auto text-sm font-base rounded-md bg-white shadow-md z-10">
                     {times.map((t) => (
                       <div
                         key={t}
@@ -134,20 +179,27 @@ export default function Home() {
             </div>
           </div>
 
+          <br />
+
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:space-x-4 space-y-3 sm:space-y-0">
-            <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold w-full sm:w-auto hover:bg-gray-900">
-              See prices
+            <button type="submit" className="bg-black text-white px-6 py-3 rounded-lg font-semibold w-full sm:w-auto hover:bg-gray-900" >
+              Send mail
             </button>
             <a
               href="#"
               className=" group text-gray-700 text-center sm:text-left"
             >
               Log in to see your recent activity
-              <div className="w-full h-[1.6px] bg-gray-300  translate-y  transition duration-700 "></div>
-              <div className="w-full h-[1.6px] bg-black scale-x-0 origin-left group-hover:scale-x-100 translate-y  transition duration-700 "></div>
+              <div className="w-full h-[1.6px] bg-gray-300 translate-y transition duration-700 "></div>
+              <div className="w-full h-[1.6px] bg-black scale-x-0 origin-left group-hover:scale-x-100 translate-y transition duration-700 "></div>
             </a>
           </div>
+
+
+          </form>
+
+         
         </div>
 
         {/* Right Section (Image) */}

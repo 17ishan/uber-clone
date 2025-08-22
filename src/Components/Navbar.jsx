@@ -27,7 +27,7 @@ const Navbar = () => {
             <div className="relative ">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className=" rounded-4xl px-2 py-1  focus:bg-gray-900 focus:border-4 flex items-center " 
+                className=" rounded-4xl px-2 py-1  focus:bg-gray-900 focus:border-4 flex items-center hover:bg-gray-900 " 
               >
                 About
                 <FiChevronDown
