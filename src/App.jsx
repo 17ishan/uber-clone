@@ -9,9 +9,11 @@ import UberSection from './Components/UberSections'
 import Footer from './Components/Footer'
 import QRSection from './Components/QRCardProps'
 import SeePrices from './Components/SeePrices'
+// import Captcha from './Components/generateCaptcha'
 
 import "@fontsource/poppins"; 
 import "@fontsource/poppins/600.css"; 
+import Captcha from './Components/Captcha'
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
     <div className='overflow-hidden '>
       <Navbar/>
       <Home/>
+      <Captcha />
       <Suggestions/>
       <UberSection/>
       <QRSection/>
